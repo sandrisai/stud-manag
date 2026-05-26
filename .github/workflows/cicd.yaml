@@ -19,7 +19,7 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Build Image
-      run: docker build -t ghcr.io/${{ github.repository }}/student-api:latest .
+      run: docker build -t ghcr.io/${{ github.repository }}:latest .
 
     - name: Push Image
       run: docker push ghcr.io/${{ github.repository }}/student-api:latest
